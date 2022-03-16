@@ -1,0 +1,71 @@
+Creating an empty dataframe : 
+A basic DataFrame, which can be created is an Empty Dataframe. An Empty Dataframe is created just by calling a dataframe constructor.
+Eg:
+Program:
+import pandas as pd
+df=pd.DataFrame()
+print(df)
+Output:
+Empty DataFrame
+Columns: []
+Index: []
+Creating a dataframe using List: 
+DataFrame can be created using a single list or a list of lists.
+Program:
+import pandas as pd
+df=['pavani','sanjana','ambika','sirisha','nyshika']
+list=pd.DataFrame(df)
+print(list)
+Output:
+        0
+0   pavani
+1  sanjana
+2   ambika
+3  sirisha
+4  nyshika
+Creating DataFrame from dict of ndarray/lists: 
+To create DataFrame from dict of narray/list, all the narray must be of same length. If index is passed then the length index should be equal to the length of arrays. If no index is passed, then by default, index will be range(n) where n is the array length.
+ Program:
+import pandas as pd
+data={ 'names':['pavani','sanjana','ambika','sirisha','nyshika'],
+    'ages':[ 3, 4, 5, 6, 7]
+    }
+df=pd.DataFrame(data)
+printdf)
+Output:
+     names  ages
+0   pavani     3
+1  sanjana     4
+2   ambika     5
+3  sirisha     6
+4  nyshika     7
+Create pandas dataframe from lists using dictionary: 
+Creating pandas data-frame from lists using dictionary can be achieved in different ways. We can create pandas dataframe from lists using dictionary using pandas.DataFrame. With this method in Pandas we can transform a dictionary of list to a dataframe.
+Program:
+import pandas as pd
+dict={'Names':['pavani','sanjana','ambika','sirisha','nyshika'],
+      'Degree':['MBA','M.Tech','B.Tech','BCA','MBA'],
+      'Score':[ 90, 80, 70, 60, 50]
+}
+df=pd.DataFrame(dict)
+print(df)
+Output:
+     Names  Degree  Score
+0   pavani     MBA     90
+1  sanjana  M.Tech     80
+2   ambika  B.Tech     70
+3  sirisha     BCA     60
+4  nyshika     MBA     50
+Create Dataframe from list of dicts
+We can pass the lists of dictionaries as input data to create the Pandas dataframe. The column names are taken as keys by default. Let's understand the following example.
+Program:
+import pandas as pd
+data=[{'A':10,'B':20,'C':30},{'D':40,'E':50,'F':60}]
+df=pd.DataFrame(data)
+print(df)
+Output:
+      A     B     C     D     E     F
+0  10.0  20.0  30.0   NaN   NaN   NaN
+1   NaN   NaN   NaN  40.0  50.0  60.0
+
+
