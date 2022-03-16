@@ -1,0 +1,141 @@
+i)Write a Pandas program to create and display a one-dimensional array-like object containing an array of data using Pandas module
+Aim:
+Write a Pandas program to create and display a one-dimensional array-like object containing an array of data using Pandas module.
+Description:
+Series():
+Series()  is a function present in the Pandas library that creates a one-dimensional array and can hold any type of objects or data in it.
+Program:
+import pandas as pd
+data=[ 2, 4, 6, 8, 10]
+df=pd.Series(data)
+print(df)
+Output:
+0     2
+1     4
+2     6
+3     8
+4    10
+dtype: int64
+ii)Write a Pandas program to convert a Panda module Series to Python list and it's type.
+Aim:
+Write a Pandas program to convert a Panda module Series to Python list and it's type.
+Description:
+Series directly to list , first get the NumPy array ndarray with the values attribute, and then use tolist() method to convert to list .
+Convert pandas.DataFrame, Series and numpy.ndarray to each other.
+Convert numpy.ndarray and list to each other.
+Program:
+import pandas as pd
+data=pd.Series([ 2, 4, 6, 8, 10])
+print("pandas's series and type")
+print(data)
+print(type(data))
+print("Convert Pandas Series to Python list")
+print(data.tolist())
+print(type(data.tolist()))
+Output:
+pandas's series and type
+0     2
+1     4
+2     6
+3     8
+4    10
+dtype: int64
+<class 'pandas.core.series.Series'>
+Convert Pandas Series to Python list
+[2, 4, 6, 8, 10]
+<class 'list'>
+iii)Write a Pandas program to add, subtract, multiple and divide two Pandas
+Series.
+Aim:
+Write a Pandas program to add, subtract, multiple and divide two Pandas
+Series.
+Description:
+Let us see how to perform basic arithmetic operations like addition, subtraction, multiplication, and division on 2 Pandas Series.
+For all the 4 operations we will follow the basic algorithm :
+Import the Pandas module.
+Create 2 Pandas Series objects.
+Perform the required arithmetic operation using the respective arithmetic operator between the 2 Series and assign the result to another Series.
+Display the resultant Series.
+Program:
+import pandas as pd
+data1=pd.Series([ 2, 4, 6, 8, 10])
+data2=pd.Series([ 3, 5, 7, 9, 11])
+print(data1)
+print(data2)
+print("Addition of two panda Series:")
+ds=data1+data2
+print(ds)
+print("Subtraction of two panda series:")
+ds=data1-data2
+print(ds)
+print("Multiplication of two panda series:")
+ds=data1*data2
+print(ds)
+print("Division of two panda series:")
+ds=data1/data2
+print(ds)
+Output:
+0     2
+1     4
+2     6
+3     8
+4    10
+dtype: int64
+0     3
+1     5
+2     7
+3     9
+4    11
+dtype: int64
+Addition of two panda Series:
+0     5
+1     9
+2    13
+3    17
+4    21
+dtype: int64
+Subtraction of two panda series:
+0   -1
+1   -1
+2   -1
+3   -1
+4   -1
+dtype: int64
+Multiplication of two panda series:
+0      6
+1     20
+2     42
+3     72
+4    110
+dtype: int64
+Division of two panda series:
+0    0.666667
+1    0.800000
+2    0.857143
+3    0.888889
+4    0.909091
+dtype: float64
+iv) Write a Pandas program to convert a NumPy array to a Pandas series.
+Aim:
+Write a Pandas program to convert a NumPy array to a Pandas series.
+Description:
+Let us see how to convert a NumPy array to a Pandas series. A NumPy array can be converted into a Pandas series by passing it in the pandas.Series() function.
+Program:
+import numpy as np
+import pandas as pd
+arr=np.array([10,20,30,40,50])
+print("Numpy Array:")
+print(arr)
+print("After converting Numpy array to pandas series:")
+pandas_series=pd.Series(arr)
+print(pandas_series)
+Output:
+Numpy Array:
+[10 20 30 40 50]
+After converting Numpy array to pandas series:
+0    10
+1    20
+2    30
+3    40
+4    50
+dtype: int32
